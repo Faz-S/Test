@@ -140,29 +140,22 @@ function GalleryPage() {
             >
               {quote}
             </div>
+            {index === imageQuotes.length - 1 && showButtons && (
+              <div className="final-yes-container">
+                <button 
+                  className="yes-button final-yes"
+                  onClick={() => handleYesClick('Final')}
+                >
+                  Yes, I Will! 💕
+                </button>
+              </div>
+            )}
             <div 
               className="gallery-image"
               style={{ backgroundImage: `url(${image})`, height: '100vh', width: '100vw', backgroundSize: 'cover', backgroundPosition: 'center' }}
             />
           </div>
         ))}
-        
-        {showButtons && (
-          <div className="final-buttons-container">
-            <button 
-              className="yes-button left-yes"
-              onClick={() => handleYesClick('Left')}
-            >
-              Yes! 💕
-            </button>
-            <button 
-              className="yes-button right-yes"
-              onClick={() => handleYesClick('Right')}
-            >
-              Yes! 💕
-            </button>
-          </div>
-        )}
       </div>
     </div>
   );

@@ -515,7 +515,7 @@ nav button:hover {
   text-align: center;
   color: white;
   font-family: 'LoveLight', cursive;
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   font-weight: 400;
   max-width: 80%;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -619,4 +619,36 @@ nav button:hover {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+.final-yes-container {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.final-yes {
+  background-color: #FF4081;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(255, 64, 129, 0.4);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.final-yes:hover {
+  background-color: #FF6B9E;
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(255, 64, 129, 0.5);
 }
