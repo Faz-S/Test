@@ -1,0 +1,622 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scrollable-gallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollable-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-image-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-quote {
+  font-family: 'Coax', cursive;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  max-width: 80%;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  opacity: 0.9;
+}
+
+.gallery-image {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.valentine-app {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav button {
+  background-color: white;
+  color: #ff6b6b;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #ff9ff3;
+  color: white;
+  transform: scale(1.1);
+}
+
+.content {
+  background: white;
+  border-radius: 15px;
+  color: #333;
+}
+
+.home-section h1 {
+  color: #ff6b6b;
+  font-size: 2.5em;
+}
+
+.heart-animation {
+  width: 100px;
+  height: 100px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff6b6b"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') no-repeat center;
+  background-size: contain;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+
+.memory-card, .song-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.love-letter {
+  text-align: left;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.love-letter h2 {
+  color: #ff6b6b;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.proposal-container {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.proposal-container h1 {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.yes-button, .no-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.yes-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.no-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.yes-button:hover, .no-button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.proposal-accepted {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.couple-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.overlay p {
+  font-size: 1.5rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button-container button {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.button-container button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.gallery-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0) !important;
+}
+
+.image-navigation {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: white;
+  width: 16px;
+  height: 16px;
+}
+
+.proposal-container {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.yes-button, .no-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.yes-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.no-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.heart {
+  position: fixed;
+  color: rgba(255, 0, 0, 0.6);
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  animation: float 10s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-200vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.parallax-gallery {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.parallax-layer.active {
+  opacity: 1;
+}
+
+.age-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.age-content {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 30px 50px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.age-content h1 {
+  font-size: 8rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.age-content p {
+  font-size: 2rem;
+  margin: 10px 0 0;
+  opacity: 0.8;
+}
+
+.image-navigation {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 20;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: white;
+  width: 16px;
+  height: 16px;
+}
+
+.proposal-container {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.yes-button, .no-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.yes-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.no-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.gallery-quote {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  text-align: center;
+  color: white;
+  font-family: 'LoveLight', cursive;
+  font-size: 2.2rem;
+  font-weight: 400;
+  max-width: 80%;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  z-index: 10;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  line-height: 1.4;
+  letter-spacing: 1px;
+}
+
+.gallery-quote.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  animation: quotePopUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes quotePopUp {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.final-buttons-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 10%;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.yes-button {
+  font-family: 'Estro MN', cursive;
+  font-size: 1.2rem;
+  color: white;
+  background: linear-gradient(135deg, #FF6B9E, #FF4081);
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 10px 25px;
+  margin-bottom: 5vh;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  cursor: pointer;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.yes-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.left-yes {
+  transform: rotate(-3deg);
+}
+
+.right-yes {
+  transform: rotate(3deg);
+}
+
+.yay-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #FF6B9E, #FF4081);
+  z-index: 1000;
+}
+
+.yay-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  animation: popIn 0.5s ease-out;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
