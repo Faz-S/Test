@@ -48,6 +48,10 @@ function GalleryPage() {
       image: image5,
       quote: "Through every moment, every memory, every dream... will you be my Valentine?",
       color: "#FF4081"  // Bright Pink
+    },
+    {
+
+      image:yayImage
     }
   ];
 
@@ -140,16 +144,7 @@ function GalleryPage() {
             >
               {quote}
             </div>
-            {index === imageQuotes.length - 1 && showButtons && (
-              <div className="final-yes-container">
-                <button 
-                  className="yes-button final-yes"
-                  onClick={() => handleYesClick('Final')}
-                >
-                  Yes, I Will! 💕
-                </button>
-              </div>
-            )}
+            
             <div 
               className="gallery-image"
               style={{ backgroundImage: `url(${image})`, height: '100vh', width: '100vw', backgroundSize: 'cover', backgroundPosition: 'center' }}
